@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #1f1f1f;
+}
+
+header{
+    background-color: #3c3c3c;
+    border-radius: 0px 0px 20px 20px;
+    height: 15rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 12rem;
+    color: white;
+    font-weight: lighter;
+    letter-spacing: 1rem;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.linha{
+    width: 100vw;
+    height: 1%;
+    background-color: #9b9b9b;
+    position: absolute; bottom: 46%;
+}
+
+nav{
+    height: 30rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem;
+}
+
+.icones {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10rem;
+}
+
+.TIcones{
+    height: 20rem;
+    border-radius: 360px;
+}
+
+.layout{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+}
+
+h2{
+    font-size: 3rem;
+    letter-spacing: 1rem;
+    color: white;
+    font-weight: lighter;
+}
+
+.pesquisa{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.pesquisa input{
+    height: 5rem;
+    width: 50rem;
+}
+.pesquisa img{
+    height: 10rem;
+    border-radius: 360px;
+}
+
+.demonstracao{
+    width: 100vw;
+    height: 40rem;
+    display: flex;
+    flex-direction: row;
+    gap: 7rem;
+}
+
+.personagens{
+    background-color: aqua;
+    height: 100%;
+    width: 125rem;
+}
+
+.info_personagens{
+    background-color: red;
+    height: 94%;
+    width: 40rem;
+}
+
+@font-face {
+    font-family: 'Star Guard';
+    src: url('./starguardcondital.otf') format('truetype'); /* Substitua o caminho pelo caminho correto para o arquivo de fonte */
+}
+
+/* Aplicar a fonte aos elementos h1 e h2 */
+h1, h2 {
+    font-family: 'Star Guard', sans-serif; /* Use o nome da fonte definido em @font-face */
+    /* Outras propriedades de estilo para h1 e h2 */
+}
