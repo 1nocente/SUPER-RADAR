@@ -86,11 +86,12 @@ h2{
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: 10vh;
 }
 
 .pesquisa input{
-    height: 5vh;
-    width: 50vw;
+    height: 10vh;
+    width: 100vw;
 }
 .pesquisa img{
     height: 10vh;
@@ -253,7 +254,9 @@ div::-webkit-scrollbar {
     
     width: 200%;
     height: 200%;
-    font-size: 32px; 
+    font-size: 21px ; 
+    font-weight: 30px;
+    margin-left: 220px;
   }
 
    #search-box{
@@ -288,4 +291,19 @@ div::-webkit-scrollbar {
     height: 100%;
     border: 10px outset goldenrod;
     border-radius: 20px; 
+    margin-left: 20%;
+}
+
+.antheroi{
+height: 200px;
+width: 200px;
+margin-bottom: 50px;
+}
+
+.hero-info{
+    margin-left: 150px;
+}
+
+input{
+height: 10vh;
 }
