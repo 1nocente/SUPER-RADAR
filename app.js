@@ -63,6 +63,7 @@ async function fetchHeroInfo(id) {
 
             // Adicione a imagem maior à div "info_personagens"
             const heroImageLarge = document.createElement("img");
+            heroImageLarge.classList.add('borda')
             heroImageLarge.src = data.image.url;
             heroImageLarge.alt = "Hero Image Large";
             infoPersonagens.appendChild(heroImageLarge);
@@ -145,6 +146,7 @@ function displayCharacter(character) {
 
     // Crie um elemento de imagem para o personagem
     const characterImage = document.createElement("img");
+   
     characterImage.src = character.image.url;
     characterImage.alt = character.name;
     characterImage.classList.add("hero-image");
