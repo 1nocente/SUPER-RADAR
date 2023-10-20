@@ -267,3 +267,25 @@ div::-webkit-scrollbar {
     height: 10%;
     margin: -100%;
    }
+
+   .TIcones{
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  
+    &:hover {
+      transform: scale(1.150);
+    }
+   }
+
+   .character-card {
+    margin: 10px;
+    text-align: center;
+}
+
+.character-card img {
+    max-width: 200px;
+}
+
+.character-card p {
+    margin: 5px;
+}
