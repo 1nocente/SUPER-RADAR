@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SuperRadar</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="app.js" defer></script>
 </head>
+
 <body>
     <header>
         <h1>SUPER - RADAR</h1>
@@ -27,15 +29,21 @@
                     <h2>ANTIHEROES</h2>
                 </div>
             </div>
-            <div class="pesquisa" id="pesquisa">
-                <input type="text" id="input">
-                <button class="botao" id="botao">pesquisar</button>
-                <img src="./img/deadpool.png" alt="">
+            <div id="search-box">
+                <input type="text" id="search-input" placeholder="Digite o nome do personagem">
+                
+                <!-- <button id="search-button">Pesquisar</button> -->
             </div>
+            <img class="botao-imagem" id="botao-imagem" src="./img/deadpool.png" alt="">
         </nav>
         <div class="demonstracao" id="demonstracao">
-            <div class="personagens" id="personagens"></div>
+            <div class="personagens" id="personagens">
+                <div id="hero-container">
+                </div>
+            </div>
             <div class="info_personagens" id="info_personagens"></div>
+
+
         </div>
     </main>
 </body>

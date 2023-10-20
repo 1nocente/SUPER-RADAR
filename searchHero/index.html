@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero Search</title>
+    <style>
+        /* Estilos CSS para a caixa de pesquisa */
+        #search-box {
+            margin: 20px;
+        }
+
+        #search-input {
+            padding: 10px;
+            width: 300px;
+        }
+
+        #search-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Superhero Search</h1>
+
+    <div id="search-box">
+        <input type="text" id="search-input" placeholder="Digite o nome do personagem">
+        <button id="search-button">Pesquisar</button>
+    </div>
+
+    <div id="results">
+        <!-- Os resultados da pesquisa serão exibidos aqui -->
+    </div>
+
+    <script>
+        // Event listener para o botão de pesquisa
+        document.getElementById("search-button").addEventListener("click", function () {
+            const searchName = document.getElementById("search-input").value;
+
+            // Fazer uma requisição para a API com o nome pesquisado
+            fetch(`https://www.superheroapi.com/api.php/836767454663626/search/${searchName}`)
+                .then(response => response.json())
+                .then(data => {
+                    displayResults(data.results);
+                })
+                .catch(error => {
+                    console.error("Ocorreu um erro na busca:", error);
+                });
+        });
+
+        // Função para exibir os resultados da pesquisa
+        function displayResults(results) {
+            const resultsDiv = document.getElementById("results");
+            resultsDiv.innerHTML = ""; // Limpa os resultados anteriores
+
+            if (results.length === 0) {
+                resultsDiv.textContent = "Nenhum resultado encontrado.";
+                return;
+            }
+
+            results.forEach(result => {
+                const resultDiv = document.createElement("div");
+                resultDiv.innerHTML = `
+                    <h2>${result.name}</h2>
+                    <img src="${result.image.url}" alt="${result.name}">
+                    <p>Nome Completo: ${result.biography["full-name"]}</p>
+                    <p>Editora: ${result.biography.publisher}</p>
+                    <p>Inteligência: ${result.powerstats.intelligence}</p>
+                    <p>Força: ${result.powerstats.strength}</p>
+                `;
+                resultsDiv.appendChild(resultDiv);
+            });
+        }
+    </script>
+</body>
+</html>
