@@ -19,6 +19,10 @@ document.getElementById("villains").addEventListener("click", function () {
     window.location.href = "https://1nocente.github.io/Villains/";
 });
 
+document.getElementById("antiheroes").addEventListener("click", function () {
+    window.location.href = "https://1nocente.github.io/AntiHeroes/";
+});
+
 
 const apiKey = '836767454663626';
 const apiUrl = 'https://www.superheroapi.com/api.php/' + apiKey + '/';
