@@ -1,5 +1,21 @@
 'use strict';
 
+
+
+function removeLoader() {
+    const loader = document.getElementById("loader");
+    if (loader) {
+        loader.style.display = "none";
+    }
+}
+
+setTimeout(removeLoader, 3000);
+
+document.getElementById("heroes").addEventListener("click", function () {
+    window.location.href = "https://1nocente.github.io/Heroes/";
+});
+
+
 const apiKey = '836767454663626';
 const apiUrl = 'https://www.superheroapi.com/api.php/' + apiKey + '/';
 
@@ -110,68 +126,7 @@ async function loadAllHeroInfo() {
     }
 }
 
-document.getElementById("heroeslayout").addEventListener("click", () => {
-    fetchCharacters("good");
-});
-
-document.getElementById("villainslayout").addEventListener("click", () => {
-    fetchCharacters("bad");
-});
-
-document.getElementById("antiheroeslayout").addEventListener("click", () => {
-    fetchCharacters("neutral");
-});
-
-function fetchCharacters(alignment) {
-    // Limpe a div de personagens antes de exibir os novos personagens
-    const personagensDiv = document.getElementById("personagens");
-    personagensDiv.innerHTML = "";
-
-    // Faça uma solicitação à API para obter informações sobre os personagens com o alinhamento desejado
-    fetch(`https://www.superheroapi.com/api.php/836767454663626/search/${alignment}`)
-        .then(response => response.json())
-        .then(data => {
-            // Exiba os personagens encontrados
-            data.results.forEach(character => {
-                displayCharacter(character);
-            });
-        })
-        .catch(error => {
-            console.error("Erro ao buscar personagens: " + error);
-        });
-}
-
-function displayCharacter(character) {
-    const personagensDiv = document.getElementById("personagens");
-
-    // Crie um elemento de imagem para o personagem
-    const characterImage = document.createElement("img");
-   
-    characterImage.src = character.image.url;
-    characterImage.alt = character.name;
-    characterImage.classList.add("hero-image");
-
-    // Adicione um evento de clique para mostrar informações detalhadas
-    characterImage.addEventListener("click", () => {
-        displayCharacterInfo(character);
-    });
-
-    // Adicione a imagem do personagem à div de personagens
-    personagensDiv.appendChild(characterImage);
-}
-
-function displayCharacterInfo(character) {
-    const infoPersonagens = document.getElementById("info_personagens");
-    infoPersonagens.innerHTML = ""; // Limpe as informações anteriores
-
-    // Crie elementos para exibir informações detalhadas
-    const characterName = document.createElement("h1");
-    characterName.textContent = character.name;
-
-    // Adicione outros detalhes do personagem aqui
-
-    // Adicione os elementos à div de informações dos personagens
-    infoPersonagens.appendChild(characterName);
-}
 
 loadAllHeroInfo();
+
+

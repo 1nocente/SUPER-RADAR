@@ -38,6 +38,7 @@ main{
     gap: 5%;
 }
 
+
 .linha{
     width: 100%;
     height: 1%;
@@ -118,7 +119,7 @@ h2{
 
 @font-face {
     font-family: 'Star Guard';
-    src: url('./starguardcondital.otf') format('truetype'); /* Substitua o caminho pelo caminho correto para o arquivo de fonte */
+    src: url('./fonts/starguardcondital.otf') format('truetype'); /* Substitua o caminho pelo caminho correto para o arquivo de fonte */
 }
 
 /* Aplicar a fonte aos elementos h1 e h2 */
@@ -303,3 +304,23 @@ div::-webkit-scrollbar {
 .antheroi{
 width: 30%;
 } 
+
+        /* CSS para tela de carregamento */
+        #loader {
+            margin-top: 10%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1f1f1f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            overflow: hidden;
+        }
+        #loader img {
+            width: 20%; /* Ajuste o tamanho do GIF conforme necessário */
+            height: 20%;
+        }
