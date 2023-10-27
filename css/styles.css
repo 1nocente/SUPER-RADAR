@@ -486,3 +486,192 @@ width: 30%;
           } 
           }
           
+
+          @media (max-width: 390px) {
+            /* Estilos para telas menores que 768px */
+
+            body{
+                overflow: hidden;
+                overflow-x: hidden;
+                overflow-y:scroll;
+            }
+            header {
+              height: 10%;
+            }
+          
+            header h1 {
+              font-size: 200%;
+            }
+          
+            main {
+              gap: 4%;
+            }
+          
+            nav {
+              height: 2%;
+            }
+          
+            .TIcones {
+              height: 15vh;
+            }
+          
+            .layout {
+              gap: 1%;
+            }
+          
+            h2 {
+              font-size: 1.5%;
+            }
+          
+            .pesquisa input {
+              height: 4vh;
+              width: 40vw;
+            }
+          
+            .pesquisa img {
+              height: 8vh;
+            }
+          
+            .demonstracao {
+              height: 40vh;
+            }
+          
+            .personagens {
+              height: 200%;
+              width: 190vw;
+            }
+          
+            .imagem {
+              height: 30%;
+              width: 5%;
+            }
+          
+            .hero-image {
+              width:35%;
+              height: 25%;
+              border: 3px outset goldenrod;
+            }
+          
+            #hero-container {
+              flex-wrap: wrap;
+            }
+          
+            .hero-name {
+              font-size: 200%;
+              margin-left: 60px;
+              letter-spacing: 0.1rem;
+            }
+          
+            .section-title {
+              font-size: 200%;
+              letter-spacing: 0rem;
+              margin-left: 20%;
+            }
+          
+            .powerstats-list {
+              font-size: 5%;
+              margin-left: 12%;
+            }
+          
+            .powerstat-item {
+              font-size: 3000%;
+              letter-spacing: -.0000000000000000000000000000001rem;
+              margin-left: 20%;
+            }
+          
+            .botao-imagem {
+              width: 40px;
+              height: 40px;
+              margin-left: -40%;
+            }
+          
+            .imgSearch{
+              height: 350px;
+              width: 350px;
+            }
+          
+            p{
+              font-size: 2rem;
+              letter-spacing: 0.5rem;
+            }
+          
+            #search-input{
+              
+              width: 150%;
+              height: 150%;
+              font-size: 15px; 
+              padding: 0px 0px 0px 12px;
+            }
+          
+             #search-box{
+              width: 20%;
+              height: 10%;
+              margin-right: -65%;
+              
+
+             }
+          
+             .TIcones{
+              width: 12vw;
+              height: 12vh;
+              
+             }
+
+             .icones {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 0%;
+            }
+          
+             .character-card img {
+              max-width: 150px;
+          }
+          
+          .borda{
+            width: 25vw;
+            height: 50%;
+              border: 5px outset goldenrod;
+              border-radius: 10px;
+              margin-left: -26%;
+          }
+          
+          .hero-info{
+              margin-left: -100px;
+          }
+          
+          .antheroi{
+          width: 20%;
+          }
+           
+  .botao-imagem:hover {
+    transform: scale(1.2); /* Ajuste o valor conforme necessário para a escala desejada */
+  }
+  
+  /* Estilo da barra de rolagem */
+div::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Estilo da área da barra de rolagem (track) */
+  div::-webkit-scrollbar-track {
+    background-color: #1f1f1f00;
+  }
+  
+  /* Estilo do polegar (thumb) da barra de rolagem */
+  div::-webkit-scrollbar-thumb {
+    background-color: #83838300;
+    border-radius: 6px;
+  }
+  
+  /* Cor do texto nos botões de seta (opcional) */
+  div::-webkit-scrollbar-button {
+    background-color: #f1003400;
+  }
+  
+  /* Estilo quando a barra de rolagem está focada (opcional) */
+  div::-webkit-scrollbar-thumb:focus {
+    background-color: #7a05b100;
+  } 
+          }
+          
